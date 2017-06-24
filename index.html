@@ -76,7 +76,7 @@
       },
       beforeCreate() {
         //获取最后一篇gank日期，并缓存history
-        axios.get("http://gank.io/api/day/history")
+        axios.get("https://gank.io/api/day/history")
           .then(function (v) {
             vm.history = v.data.results;
             [vm.currentYear, vm.currentMonth, vm.currentDate] = vm.history[0].split("-");
@@ -110,7 +110,7 @@
         getData(str) {
           let [year, month, date] = this.getDate(str);
 
-          axios.get('http://gank.io/api/day/' + year + "/" + month +
+          axios.get('https://gank.io/api/day/' + year + "/" + month +
               "/" + date)
             .then(function (r) {
 
@@ -137,7 +137,7 @@
             }
           };
           let [year, month, date] = this.getDate(str);
-          axios.get("http://gank.io/api/history/content/day/" + year + "/" + month + "/" +
+          axios.get("https://gank.io/api/history/content/day/" + year + "/" + month + "/" +
               date)
             .then(function (v) {
               if (str == "pre") {
