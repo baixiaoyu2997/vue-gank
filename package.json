@@ -1,0 +1,33 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.19.0",
+    "fs-extra": "^2.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch-path": "^0.1.0",
+    "minimist": "^1.2.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^15.0.1",
+    "vue": "^2.3.2",
+    "vue-cli": "^2.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "description": ""
+}
