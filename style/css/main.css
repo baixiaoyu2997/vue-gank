@@ -50,9 +50,16 @@ body {
 }
 
 .container .preAndNext {
-  margin-bottom: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.container .preAndNext p {
+  flex: 0 0 47%;
+}
+
+.container .preAndNext_right {
+  text-align: right;
 }
 
 .container img {
