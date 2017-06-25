@@ -114,12 +114,10 @@
               "/" + date)
             .then(function (r) {
 
-              vm.show = true;
-
               for (let x in r.data.results) {
                 vm[x] = r.data.results[x];
               }
-
+              vm.show = true;
               if (r.data.results["福利"]) {
                 vm.fuliUrl = r.data.results["福利"][0].url;
               }
