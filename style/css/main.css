@@ -52,9 +52,11 @@ body {
 .container .preAndNext {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .container .preAndNext p {
+  margin-bottom: 1.2em;
   flex: 0 0 47%;
 }
 
