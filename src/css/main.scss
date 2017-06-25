@@ -12,16 +12,6 @@ html {
     font-size: 62.5%;
 }
 
-a {
-    color: #4183c4;
-    word-break: break-all;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-        color: #0fa0ce;
-    }
-}
-
 p {
     font-size: 1.5em;
 }
@@ -33,6 +23,37 @@ body {
     font-stretch: normal;
     line-height: 2;
     font-family: 'Lantinghei SC', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.brand {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    clear: right;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    h5 {
+        font-size: 2.4rem;
+        font-family: Verdana, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+        font-weight: 100;
+        color: #000;
+        line-height: 1.35;
+        letter-spacing: -.05rem;
+        a {
+            text-align: center;
+            color: #333;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 550px) {
+            font-size: 1.8rem !important;
+        }
+    }
+    .slogan {
+        color: #000;
+        margin: 1em;
+        font-size: 0.95em;
+    }
 }
 
 .container {
@@ -48,6 +69,15 @@ body {
     }
     &>* {
         margin-bottom: 1.2em;
+    }
+    a {
+        color: #4183c4;
+        word-break: break-all;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: #0fa0ce;
+        }
     }
     .preAndNext {
         display: flex;
