@@ -32,6 +32,6 @@ gulp.task('watch', function () {
 gulp.task("sass", function () {
     return gulp.src("./src/css/*.scss").pipe(sass({
             outputStyle: "expanded"
-    }).on('error', sass.logError)).pipe(csso()) //css mini
+        }).on('error', sass.logError))
         .pipe(gulp.dest("./dist/css/"));
 });
