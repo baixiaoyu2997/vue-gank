@@ -45,6 +45,13 @@ body {
   padding: 40px 60px;
 }
 
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+    padding: 2em 1em;
+  }
+}
+
 .container > * {
   margin-bottom: 1.2em;
 }
@@ -53,11 +60,18 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
+  flex-wrap: wrap;
 }
 
 .container .preAndNext p {
   margin-bottom: 1.2em;
   flex: 0 0 47%;
+}
+
+@media screen and (max-width: 550px) {
+  .container .preAndNext p {
+    flex: 0 0 100%;
+  }
 }
 
 .container .preAndNext_right {
