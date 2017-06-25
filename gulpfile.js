@@ -4,6 +4,8 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 // var exec = require('child_process').exec;
 var babel = require("gulp-babel");
+var cleanCSS = require("gulp-clean-css");
+var uglify = require("gulp-uglify");
 var livereload = require('gulp-livereload');
 
 gulp.task("default", ["watch"]);
@@ -16,7 +18,7 @@ gulp.task('babel', () => {
     return gulp.src('./src/js/main.js')
         .pipe(babel({
             presets: ['es2015']
-        }))
+        })).pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 //监听
@@ -30,6 +32,6 @@ gulp.task('watch', function () {
 gulp.task("sass", function () {
     return gulp.src("./src/css/*.scss").pipe(sass({
             outputStyle: "expanded"
-        }).on('error', sass.logError))
+        }).on('error', sass.logError)).pipe(cleanCSS()) //css mini
         .pipe(gulp.dest("./dist/css/"));
 });
