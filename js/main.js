@@ -136,6 +136,7 @@ var vm = new Vue({
   },
   watch: {
     currentDate: function currentDate() {
+      this.show = false;
       this.getData();
       this.getPreAndNextTitle();
       this.getPreAndNextTitle("pre");
