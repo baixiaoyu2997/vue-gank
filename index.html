@@ -3,7 +3,6 @@
 
 <head>
   <title v-text="title"></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="" href="./style/css/main.css">
   <script src="./js/vue.min.js"></script>
   <script src="./js/axios.min.js"></script>
@@ -158,7 +157,6 @@
       },
       watch: {
         currentDate() {
-          this.show = false;
           this.getData();
           this.getPreAndNextTitle();
           this.getPreAndNextTitle("pre");
