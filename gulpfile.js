@@ -4,7 +4,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 // var exec = require('child_process').exec;
 var babel = require("gulp-babel");
-var csso = require("gulp-csso");
+var cleanCss = require("gulp-clean-css");
 var uglify = require("gulp-uglify");
 var livereload = require('gulp-livereload');
 
@@ -32,6 +32,6 @@ gulp.task('watch', function () {
 gulp.task("sass", function () {
     return gulp.src("./src/css/*.scss").pipe(sass({
             outputStyle: "expanded"
-        }).on('error', sass.logError))
+        }).on('error', sass.logError)).pipe(cleanCss())
         .pipe(gulp.dest("./dist/css/"));
 });
