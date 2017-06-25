@@ -3,6 +3,7 @@ var gulp = require("gulp");
 // var fse = require("fs-extra");
 var sass = require("gulp-sass");
 // var exec = require('child_process').exec;
+var babel = require("gulp-babel");
 var livereload = require('gulp-livereload');
 
 gulp.task("default", ["watch"]);
@@ -10,6 +11,13 @@ gulp.task("default", ["watch"]);
 gulp.task('html', function () {
     return gulp.src('./index.html')
         .pipe(livereload());
+});
+gulp.task('babel', () => {
+    return gulp.src('main.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('js'));
 });
 //监听
 gulp.task('watch', function () {
@@ -25,4 +33,3 @@ gulp.task("sass", function () {
         }).on('error', sass.logError))
         .pipe(gulp.dest("./style/css/"));
 });
-
