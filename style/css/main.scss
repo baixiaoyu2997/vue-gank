@@ -48,7 +48,9 @@ body {
     .preAndNext {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0;
         p {
+            margin-bottom: 1.2em;
             flex: 0 0 47%;
         }
         &_right {
