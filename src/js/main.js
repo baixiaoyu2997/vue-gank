@@ -76,7 +76,8 @@ let vm = new Vue({
       axios.get('https://gank.io/api/day/' + year + "/" + month +
           "/" + date)
         .then(function (r) {
-
+          //清除原先数据
+          [this.iOS, this.休息视频, this.前端, this.瞎推荐, this.福利, this.拓展资源, this.App] = [];
           for (let x in r.data.results) {
             vm[x] = r.data.results[x];
           }
