@@ -77,7 +77,7 @@ let vm = new Vue({
           "/" + date)
         .then(function (r) {
           //清除原先数据
-          [this.iOS, this.休息视频, this.前端, this.瞎推荐, this.福利, this.拓展资源, this.App] = [];
+          [vm.iOS, vm.休息视频, vm.前端, vm.瞎推荐, vm.福利, vm.拓展资源, vm.App] = [];
           for (let x in r.data.results) {
             vm[x] = r.data.results[x];
           }
@@ -97,7 +97,7 @@ let vm = new Vue({
           vm.nextTitle = "";
           return;
         }
-      };
+      }
       let [year, month, date] = this.getDate(str);
       axios.get("https://gank.io/api/history/content/day/" + year + "/" + month + "/" +
           date)

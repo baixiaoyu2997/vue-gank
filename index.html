@@ -3,6 +3,7 @@
 
 <head>
   <title v-text="title"></title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <link rel="stylesheet" type="" href="./dist/css/main.css">
   <script src="./dist/js/vue.min.js"></script>
@@ -25,13 +26,13 @@
     <div class="fuli">
       <img v-bind:src="fuliUrl">
     </div>
-    <list v-if="iOS!=''" :data-item="iOS" data-title="IOS"></list>
-    <list v-if="Android!=''" :data-item="Android" data-title="Android"></list>
-    <list v-if="前端!=''" :data-item="前端" data-title="前端"></list>
-    <list v-if="瞎推荐!=''" :data-item="瞎推荐" data-title="瞎推荐"></list>
-    <list v-if="App!=''" :data-item="App" data-title="App"></list>
-    <list v-if="拓展资源!=''" :data-item="拓展资源" data-title="拓展资源"></list>
-    <list v-if="休息视频!=''" :data-item="休息视频" data-title="休息视频"></list>
+    <list v-if="iOS" :data-item="iOS" data-title="IOS"></list>
+    <list v-if="Android" :data-item="Android" data-title="Android"></list>
+    <list v-if="前端" :data-item="前端" data-title="前端"></list>
+    <list v-if="瞎推荐" :data-item="瞎推荐" data-title="瞎推荐"></list>
+    <list v-if="App" :data-item="App" data-title="App"></list>
+    <list v-if="拓展资源" :data-item="拓展资源" data-title="拓展资源"></list>
+    <list v-if="休息视频" :data-item="休息视频" data-title="休息视频"></list>
     <p>感谢所有默默付出的编辑们，愿大家有美好一天。</p>
     <div class="preAndNext">
       <p><a href="javascript:void(0)" @click="doPre">{{preTitle}}</a></p>

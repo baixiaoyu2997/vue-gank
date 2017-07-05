@@ -18,7 +18,8 @@ gulp.task('babel', () => {
     return gulp.src('./src/js/main.js')
         .pipe(babel({
             presets: ['es2015']
-        })).pipe(uglify())
+        }))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 //监听
