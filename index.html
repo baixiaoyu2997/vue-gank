@@ -1,46 +1,11 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <title v-text="title"></title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <link rel="stylesheet" type="" href="./dist/css/main.css">
-  <script src="./dist/js/vue.min.js"></script>
-  <script src="./dist/js/axios.min.js"></script>
-</head>
-
-<body>
-  <header class="brand">
-    <h5><a href="https://baixiaoyu2997.github.io/vue-gank/">干货集中营</a></h5>
-    <p class="slogan">每日分享妹子图 和 技术干货，还有供大家中午休息的休闲视频</p>
-    <img src="./dist/image/work.png" title="收心工作啦！">
-  </header>
-  <div id="app" v-if="show" class="container">
-    <div class="preAndNext">
-      <p><a href="javascript:void(0)" @click="doPre">{{preTitle}}</a></p>
-      <p class="preAndNext_right"><a href="javascript:void(0)" @click="doNext">{{nextTitle}}</a></p>
-    </div>
-    <h1 class="header">{{currentMonth+"月"+currentDate+"日:"+headerTitle}}</h1>
-    <hr>
-    <div class="fuli">
-      <img v-bind:src="fuliUrl">
-    </div>
-    <list v-if="iOS" :data-item="iOS" data-title="IOS"></list>
-    <list v-if="Android" :data-item="Android" data-title="Android"></list>
-    <list v-if="前端" :data-item="前端" data-title="前端"></list>
-    <list v-if="瞎推荐" :data-item="瞎推荐" data-title="瞎推荐"></list>
-    <list v-if="App" :data-item="App" data-title="App"></list>
-    <list v-if="拓展资源" :data-item="拓展资源" data-title="拓展资源"></list>
-    <list v-if="休息视频" :data-item="休息视频" data-title="休息视频"></list>
-    <p>感谢所有默默付出的编辑们，愿大家有美好一天。</p>
-    <div class="preAndNext">
-      <p><a href="javascript:void(0)" @click="doPre">{{preTitle}}</a></p>
-      <p class="preAndNext_right"><a href="javascript:void(0)" @click="doNext">{{nextTitle}}</a></p>
-    </div>
-    <hr>
-  </div>
-  <script src="./dist/js/main.js"></script>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-onsenui-douban</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
 </html>
