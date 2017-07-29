@@ -1,36 +1,29 @@
 {
-  "name": "www",
+  "name": "vue-onsenui-douban",
+  "description": "A Vue.js project",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "baixiaoyu2997 <bxy2997@sina.com>",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.18.8",
-    "eslint": "^3.19.0",
-    "fs-extra": "^2.1.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.4.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch-path": "^0.1.0",
-    "minimist": "^1.2.0",
-    "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^15.0.1",
-    "vue": "^2.3.2",
-    "vue-cli": "^2.8.1"
+    "axios": "^0.16.2",
+    "vue": "^2.3.3"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
-  },
-  "description": ""
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-env": "^1.5.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "vue-loader": "^12.1.0",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
 }
