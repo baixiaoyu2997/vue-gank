@@ -1,4 +1,4 @@
-# vue-onsenui-douban
+# vue-gank
 
 > A Vue.js project
 
